@@ -1,0 +1,36 @@
+<h1>Gestión de SATs</h1>
+
+<table class="table table-hover">
+<tr>
+    <th style="font-size: 20px">Referencia</th>
+    <th style="font-size: 20px">Descripción</th>
+    <th style="font-size: 20px" >Ver / Editar</th>
+    
+    <th style="font-size: 20px" >Estado</th>
+</tr>
+    <% @sats.each do |sat| %>
+    <% if sat.estado == 4 %>
+    <tr id ="rr">
+        <td style="font-weight: bold; color: red" ><%= sat.referencia.first(12) %></td>
+        <td ><%= sat.descripcion.first(90) %></td>
+        <td ><%= link_to "[Editar/Ver]", edit_sat_path(sat), class: "xxx" %></td>
+        
+        <td>
+          
+               Cerrado
+           
+         </td>
+         </td>
+         </td>
+ 
+    </tr>
+    <% end %>
+    
+    
+    <% end %>
+    
+</table>
+
+<p>
+    <%= link_to "Regresar", sats_path(@sats), class:"boton" %>
+</p>

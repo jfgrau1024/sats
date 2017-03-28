@@ -1,0 +1,39 @@
+<% if @sats.errors.any? %>
+    <h3>Se encontraron los siguientes errores</h3>
+    <ul "list-group">
+        <% @sats.errors.full_messages.each do |msg| %>
+        <li class="list-group-item list-group-item-danger"> <%=  msg %>  </li>      
+        
+        <% end%>
+
+    </ul>
+<% end %>
+<%= form_for @sats do |f|  %>
+    
+    <div class="col-md-3" style="float: left;">
+    <p>
+        <h2 style="font-weight: bold;">  Referencia </h2> 
+         <%= f.text_field :referencia, class: "form-control" %>
+        
+    </p>
+    </div>
+    <div  class="form-group col-md-3" style="float: left;">
+        <h2 style="font-weight: bold;">  Estado </h2> 
+        <%= f.select(:estado, [['Abierto', 1], ['Tramitado', 2], ['Reclamo', 3], ['Cerrado', 4]], {}, { :class => 'form-control' }) %>
+    </div>
+    <div class="col-md-12" style="float: left;">
+    <p>
+        <h2 style="font-weight: bold;">  Descripción </h2> 
+        <%= f.text_area :descripcion, :rows => 10, class: "form-control largos" %>
+    </p>
+    </div>
+<div style="clear: both;"></div>
+
+<div class="col-md-11"></div>
+<%= f.submit "Enviar", class: " btn btn-success btn-md", height: "100px" %>
+<% end %>
+</div>
+<div style="clear: both;"></div>
+<div style="width: 100%; text_align:center;" class="col-md-12">
+<h3>[<%= link_to "Ir al inicio", sats_path(@sats), class:"boton" %>]</h3>
+</div>

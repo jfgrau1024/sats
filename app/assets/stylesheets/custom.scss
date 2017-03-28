@@ -1,0 +1,42 @@
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+a {
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
+  
+  
+}
+
+
+a hover {
+  
+  text-decoration: none;
+  color: black;
+  text-decoration: none;
+}
+
+h1 {
+  font-weight:bold;
+  color: green;
+}
+
+.imglogo{
+	height: 19px;
+	position: fixed;
+	right: 0;
+	padding-right: 10px;
+}
+
+.foo {
+   	color: grey;
+   	padding: 6px;
+   	text-align: center;
+    position:fixed;
+    bottom:0;
+    height: 30px;
+    width: 100%;
+    background-color:#f0f5f5; 
+}

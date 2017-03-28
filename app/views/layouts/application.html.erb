@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sats</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="container">
+    <%= yield %>
+    </div>
+    <footer class="foo">jeangrau@outlook.es <%= image_tag "logo.png", :alt => "MediaMarkt", :title => "MediaMarkt", class: "imglogo"%></footer>
+  </body>
+</html>
